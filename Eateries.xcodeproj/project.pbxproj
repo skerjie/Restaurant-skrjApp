@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F12C906E1DBB81E500B47A10 /* EateriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C906D1DBB81E500B47A10 /* EateriesTableViewController.swift */; };
 		F12C90701DBB866700B47A10 /* EateriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C906F1DBB866700B47A10 /* EateriesTableViewCell.swift */; };
+		F12C90721DBDBE8500B47A10 /* EateriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C90711DBDBE8500B47A10 /* EateriesDetailViewController.swift */; };
+		F12C90741DBDCDE700B47A10 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C90731DBDCDE700B47A10 /* Restaurant.swift */; };
 		F174E3311DB6A28C008AFDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174E3301DB6A28C008AFDAC /* AppDelegate.swift */; };
 		F174E3361DB6A28C008AFDAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174E3341DB6A28C008AFDAC /* Main.storyboard */; };
 		F174E3391DB6A28C008AFDAC /* Eateries.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F174E3371DB6A28C008AFDAC /* Eateries.xcdatamodeld */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		F12C906D1DBB81E500B47A10 /* EateriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateriesTableViewController.swift; sourceTree = "<group>"; };
 		F12C906F1DBB866700B47A10 /* EateriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateriesTableViewCell.swift; sourceTree = "<group>"; };
+		F12C90711DBDBE8500B47A10 /* EateriesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateriesDetailViewController.swift; sourceTree = "<group>"; };
+		F12C90731DBDCDE700B47A10 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F174E32D1DB6A28C008AFDAC /* Eateries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eateries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F174E3301DB6A28C008AFDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F174E3351DB6A28C008AFDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				F174E3301DB6A28C008AFDAC /* AppDelegate.swift */,
 				F12C906D1DBB81E500B47A10 /* EateriesTableViewController.swift */,
 				F12C906F1DBB866700B47A10 /* EateriesTableViewCell.swift */,
+				F12C90711DBDBE8500B47A10 /* EateriesDetailViewController.swift */,
+				F12C90731DBDCDE700B47A10 /* Restaurant.swift */,
 				F174E3341DB6A28C008AFDAC /* Main.storyboard */,
 				F174E33A1DB6A28C008AFDAC /* Assets.xcassets */,
 				F174E33C1DB6A28C008AFDAC /* LaunchScreen.storyboard */,
@@ -146,7 +152,9 @@
 			files = (
 				F174E3311DB6A28C008AFDAC /* AppDelegate.swift in Sources */,
 				F174E3391DB6A28C008AFDAC /* Eateries.xcdatamodeld in Sources */,
+				F12C90741DBDCDE700B47A10 /* Restaurant.swift in Sources */,
 				F12C906E1DBB81E500B47A10 /* EateriesTableViewController.swift in Sources */,
+				F12C90721DBDBE8500B47A10 /* EateriesDetailViewController.swift in Sources */,
 				F12C90701DBB866700B47A10 /* EateriesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

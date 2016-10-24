@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IOw-Tn-DBN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jvS-dh-G9L">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Eateries Table View Controller-->
+        <!--Мои рестораны-->
         <scene sceneID="aSE-Yk-n9i">
             <objects>
                 <tableViewController id="IOw-Tn-DBN" customClass="EateriesTableViewController" customModule="Eateries" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="cKP-19-RU0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="85" id="Ry6-cV-SvZ" customClass="EateriesTableViewCell" customModule="Eateries" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ry6-cV-SvZ" id="BIn-vb-fq1">
-                                    <frame key="frameInset" width="375" height="84"/>
+                                    <frame key="frameInset" width="320" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="152-66-PHp">
@@ -68,6 +68,7 @@
                                     <outlet property="nameLabel" destination="PKo-hf-y6c" id="ZJ6-Kd-DdK"/>
                                     <outlet property="thumbnailImageView" destination="mwS-eA-9Jo" id="aaf-Zj-M4g"/>
                                     <outlet property="typeLabel" destination="ad8-63-BHr" id="RrG-EI-r9V"/>
+                                    <segue destination="cKz-MG-wHq" kind="show" identifier="detailSegue" id="z4w-Q6-gM0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,10 +77,59 @@
                             <outlet property="delegate" destination="IOw-Tn-DBN" id="DuV-cA-CL9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Мои рестораны" id="eo5-5I-W1e"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ov-mC-DAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="119"/>
+            <point key="canvasLocation" x="892" y="118"/>
+        </scene>
+        <!--Eateries Detail View Controller-->
+        <scene sceneID="EiO-tW-hLc">
+            <objects>
+                <viewController id="cKz-MG-wHq" customClass="EateriesDetailViewController" customModule="Eateries" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1co-iO-1vG"/>
+                        <viewControllerLayoutGuide type="bottom" id="iBW-B1-gfC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZUu-jP-azg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mM6-0f-VIo"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iBW-B1-gfC" firstAttribute="top" secondItem="mM6-0f-VIo" secondAttribute="bottom" id="Dfe-dH-L6A"/>
+                            <constraint firstItem="mM6-0f-VIo" firstAttribute="leading" secondItem="ZUu-jP-azg" secondAttribute="leading" id="EAK-9g-SLI"/>
+                            <constraint firstAttribute="trailing" secondItem="mM6-0f-VIo" secondAttribute="trailing" id="Gnx-no-Ma0"/>
+                            <constraint firstItem="mM6-0f-VIo" firstAttribute="top" secondItem="1co-iO-1vG" secondAttribute="bottom" id="be3-YE-KSl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="mM6-0f-VIo" id="aSP-KP-I5V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTy-as-Jjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rd4-xw-Ldh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jvS-dh-G9L" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bop-vj-yRi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IOw-Tn-DBN" kind="relationship" relationship="rootViewController" id="fqV-Pg-Ndo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNS-f5-wkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
