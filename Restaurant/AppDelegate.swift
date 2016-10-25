@@ -16,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) // цвет navigationBar
+    UINavigationBar.appearance().tintColor = .white // цвет текста отображаемого при переходах типа кнопки < Back
+    
+    if let barFont = UIFont(name: "HelveticaNeue-Light", size: 24) {
+      UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: barFont] // название на главном экране navigationBar будет белым, с заданным нами цветом
+    }
+    
     return true
   }
 

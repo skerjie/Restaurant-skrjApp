@@ -17,6 +17,7 @@
 		F174E3391DB6A28C008AFDAC /* Eateries.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F174E3371DB6A28C008AFDAC /* Eateries.xcdatamodeld */; };
 		F174E33B1DB6A28C008AFDAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F174E33A1DB6A28C008AFDAC /* Assets.xcassets */; };
 		F174E33E1DB6A28C008AFDAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174E33C1DB6A28C008AFDAC /* LaunchScreen.storyboard */; };
+		F1CCAB571DBFAFDA0026A18C /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F174E33A1DB6A28C008AFDAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F174E33D1DB6A28C008AFDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F174E33F1DB6A28C008AFDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				F12C90771DBE0B6100B47A10 /* Detaile */,
 				F12C90731DBDCDE700B47A10 /* Restaurant.swift */,
 				F174E3341DB6A28C008AFDAC /* Main.storyboard */,
+				F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */,
 				F174E33A1DB6A28C008AFDAC /* Assets.xcassets */,
 				F174E33C1DB6A28C008AFDAC /* LaunchScreen.storyboard */,
 				F174E33F1DB6A28C008AFDAC /* Info.plist */,
@@ -167,6 +170,7 @@
 				F12C90741DBDCDE700B47A10 /* Restaurant.swift in Sources */,
 				F12C906E1DBB81E500B47A10 /* EateriesTableViewController.swift in Sources */,
 				F12C90721DBDBE8500B47A10 /* EateriesDetailViewController.swift in Sources */,
+				F1CCAB571DBFAFDA0026A18C /* RateViewController.swift in Sources */,
 				F12C90701DBB866700B47A10 /* EateriesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

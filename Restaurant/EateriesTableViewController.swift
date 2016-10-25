@@ -33,8 +33,18 @@ class EateriesTableViewController: UITableViewController {
 //  
 //  var restaurantIsVisited = [Bool](repeatElement(false, count: 15))
   
+  
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.hidesBarsOnSwipe = true    // запрещаем прятоться  navigationbar до вызова функции viewDidLoad
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    tableView.estimatedRowHeight = 85
+    tableView.rowHeight = UITableViewAutomaticDimension
+    
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil) // убираем или делаем пустой кнопку назад
     
   }
   
@@ -59,6 +69,8 @@ class EateriesTableViewController: UITableViewController {
     cell.thumbnailImageView.layer.cornerRadius = 32.5 // закругление краев изображения
     cell.thumbnailImageView.clipsToBounds = true  // позволяет обрезать изображение по нашему layer'y
     cell.nameLabel.text = restaurants[indexPath.row].name
+    cell.locationLabel.text = restaurants[indexPath.row].location
+    cell.typeLabel.text = restaurants[indexPath.row].type
     
     //    if restaurantIsVisited[indexPath.row] {
     //    cell.accessoryType = .checkmark

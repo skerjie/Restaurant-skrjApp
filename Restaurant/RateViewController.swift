@@ -13,7 +13,12 @@ class RateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      let blurEffect = UIBlurEffect(style: .light)
+      let blurEffectView = UIVisualEffectView(effect: blurEffect)
+      blurEffectView.frame = self.view.bounds // говорим, что размер фрэйма blurEffectView должен быть как рамки нашего вью
+      blurEffectView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+      self.view.insertSubview(blurEffectView, at: 1)
+      
     }
 
     override func didReceiveMemoryWarning() {
