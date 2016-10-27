@@ -10,6 +10,7 @@ import UIKit
 
 class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
+  @IBOutlet weak var mapButton: UIButton!
   @IBOutlet weak var rateButton: UIButton!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var imageView: UIImageView!
@@ -17,7 +18,13 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
   // var imageName = ""
   
   @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-  
+    guard let svc = segue.source as? RateViewController else {
+      return
+    }
+    guard let rating = svc.restRating else {
+      return
+    }
+    rateButton.setImage(UIImage(named: rating), for: .normal)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -28,13 +35,17 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    rateButton.layer.cornerRadius = 5
-    rateButton.layer.borderWidth = 1 // толщина рамочки
-    rateButton.layer.borderColor = UIColor.white.cgColor
+    let buttons = [rateButton, mapButton]
+    
+    for button in buttons {
+      guard let button = button else {break} // сначала извлекаем кнопку, чтобы потом отдельно каждую кнопку не делать опциональной ?
+      button.layer.cornerRadius = 5
+      button.layer.borderWidth = 1 // толщина рамочки
+      button.layer.borderColor = UIColor.white.cgColor
+    }
     
     tableView.estimatedRowHeight = 38
     tableView.rowHeight = UITableViewAutomaticDimension
-    
     imageView.image = UIImage(named: restaurant!.image)
     
     //      tableView.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
@@ -81,6 +92,13 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "mapSegue" {
+    let dvc = segue.destination as! MapViewController
+      dvc.restaurant = self.restaurant
+    }
   }
   
 }
