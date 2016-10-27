@@ -29,7 +29,7 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
   
   override func viewWillAppear(_ animated: Bool) {
     navigationController?.hidesBarsOnSwipe = false
-    navigationController?.setToolbarHidden(false, animated: true) // запрещаем прятоться  navigationbar до вызова функции viewDidLoad
+    navigationController?.setNavigationBarHidden(false, animated: true) // запрещаем прятаться  navigationbar до вызова функции viewDidLoad
   }
   
   override func viewDidLoad() {

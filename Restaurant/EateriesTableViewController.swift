@@ -27,6 +27,10 @@ class EateriesTableViewController: UITableViewController {
     Restaurant(name: "Шок", type: "Ресторан", location: "Уфа", image: "shok.jpg", isVisited: false),
     Restaurant(name: "Бочка", type: "Ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
   
+  @IBAction func close(segue: UIStoryboardSegue) {
+  
+  }
+  
 //  var restaurantNames = ["Ogonёk Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "X.O", "Балкан Гриль", "Respublica", "Speak Easy", "Morris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
 //  
 //  var restaurantImages = ["ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
@@ -35,7 +39,7 @@ class EateriesTableViewController: UITableViewController {
   
   
   override func viewWillAppear(_ animated: Bool) {
-    navigationController?.hidesBarsOnSwipe = true    // запрещаем прятоться  navigationbar до вызова функции viewDidLoad
+    navigationController?.hidesBarsOnSwipe = true    // запрещаем прятаться  navigationbar до вызова функции viewDidLoad
   }
   
   override func viewDidLoad() {
