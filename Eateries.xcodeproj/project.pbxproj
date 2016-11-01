@@ -16,6 +16,8 @@
 		F174E3391DB6A28C008AFDAC /* Eateries.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F174E3371DB6A28C008AFDAC /* Eateries.xcdatamodeld */; };
 		F174E33B1DB6A28C008AFDAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F174E33A1DB6A28C008AFDAC /* Assets.xcassets */; };
 		F174E33E1DB6A28C008AFDAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174E33C1DB6A28C008AFDAC /* LaunchScreen.storyboard */; };
+		F1C25FFD1DC8C2D30079C34F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C25FFC1DC8C2D30079C34F /* PageViewController.swift */; };
+		F1C25FFF1DC8C2F00079C34F /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C25FFE1DC8C2F00079C34F /* ContentViewController.swift */; };
 		F1CCAB571DBFAFDA0026A18C /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */; };
 		F1CCAB591DC1FF0C0026A18C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCAB581DC1FF0C0026A18C /* MapViewController.swift */; };
 		F1CCAB5C1DC1FFCF0026A18C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCAB5B1DC1FFCF0026A18C /* MapKit.framework */; };
@@ -34,6 +36,8 @@
 		F174E33A1DB6A28C008AFDAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F174E33D1DB6A28C008AFDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F174E33F1DB6A28C008AFDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1C25FFC1DC8C2D30079C34F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		F1C25FFE1DC8C2F00079C34F /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		F1CCAB581DC1FF0C0026A18C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F1CCAB5B1DC1FFCF0026A18C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -84,6 +88,7 @@
 				F174E3301DB6A28C008AFDAC /* AppDelegate.swift */,
 				F12C906D1DBB81E500B47A10 /* EateriesTableViewController.swift */,
 				F12C906F1DBB866700B47A10 /* EateriesTableViewCell.swift */,
+				F1C260001DC8C2FA0079C34F /* Page */,
 				F12C90771DBE0B6100B47A10 /* Detaile */,
 				F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */,
 				F1CCAB581DC1FF0C0026A18C /* MapViewController.swift */,
@@ -96,6 +101,15 @@
 			);
 			name = Eateries;
 			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		F1C260001DC8C2FA0079C34F /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				F1C25FFC1DC8C2D30079C34F /* PageViewController.swift */,
+				F1C25FFE1DC8C2F00079C34F /* ContentViewController.swift */,
+			);
+			name = Page;
 			sourceTree = "<group>";
 		};
 		F1CCAB5A1DC1FFCF0026A18C /* Frameworks */ = {
@@ -185,12 +199,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F12C90761DBE0B3400B47A10 /* EateriesDetailTableViewCell.swift in Sources */,
+				F1C25FFD1DC8C2D30079C34F /* PageViewController.swift in Sources */,
 				F174E3311DB6A28C008AFDAC /* AppDelegate.swift in Sources */,
 				F174E3391DB6A28C008AFDAC /* Eateries.xcdatamodeld in Sources */,
 				F1CCAB591DC1FF0C0026A18C /* MapViewController.swift in Sources */,
 				F12C906E1DBB81E500B47A10 /* EateriesTableViewController.swift in Sources */,
 				F1CCAB5E1DC221580026A18C /* NewEateryTableViewController.swift in Sources */,
 				F12C90721DBDBE8500B47A10 /* EateriesDetailViewController.swift in Sources */,
+				F1C25FFF1DC8C2F00079C34F /* ContentViewController.swift in Sources */,
 				F1CCAB571DBFAFDA0026A18C /* RateViewController.swift in Sources */,
 				F12C90701DBB866700B47A10 /* EateriesTableViewCell.swift in Sources */,
 			);

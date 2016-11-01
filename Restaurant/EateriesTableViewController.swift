@@ -89,9 +89,19 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
       } catch let error as NSError {
         print(error.localizedDescription)
       }
-      
     }
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
+    let userDefaults = UserDefaults.standard
+    let wasIntroWatched = userDefaults.bool(forKey: "wasIntroWatched")
+    guard !wasIntroWatched else {return}
+    
+    if let pageViewCoontroller = storyboard?.instantiateViewController(withIdentifier: "pageViewController") as? PageViewController {
+      present(pageViewCoontroller, animated: true, completion: nil)
+    }
   }
   
   // MARK: - Fetch Result Controller Delegate
