@@ -21,7 +21,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
       
       mapView.delegate = self
 
-      geocoder.geocodeAddressString(restaurant.location) { (placemarks, error) in
+      geocoder.geocodeAddressString(restaurant.location!) { (placemarks, error) in
         guard error == nil else {return}
         guard let placemarks = placemarks else {return}
         

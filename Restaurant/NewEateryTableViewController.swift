@@ -16,21 +16,48 @@ class NewEateryTableViewController: UITableViewController, UIImagePickerControll
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var noButton: UIButton!
   @IBOutlet weak var yesButton: UIButton!
+  var isVisited = false
   
   @IBAction func toggleIsVisitedPressed(_ sender: UIButton) {
     if sender == yesButton {
     sender.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
       noButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+      isVisited = true
     } else {
       sender.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
       yesButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+      isVisited = false
     }
   }
 
   @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
     if nameTextField.text == "" || adressTextField.text == "" || typeTextField.text == "" {
-      print("Не все поля заполнены")
+      let ac = UIAlertController(title: "Ошибка", message: "Не все поля заполнены", preferredStyle: .alert)
+      let cancel = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+      ac.addAction(cancel)
+      present(ac, animated: true, completion: nil)
     } else {
+      
+      // добираемся до контекста(context)
+      if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        // создаем экземпляр ресторана в контексте
+        let restaurant = Restaurant(context: context)
+        restaurant.name = nameTextField.text
+        restaurant.location = adressTextField.text
+        restaurant.type = typeTextField.text
+        restaurant.isVisited = isVisited
+        if let image = imageView.image {
+          // чтобы получить изображение как бинари дата нужно кастить к NSData и метод UIImagePNGRepresentation, так как изображения в  PNG
+        restaurant.image = UIImagePNGRepresentation(image) as NSData?
+        }
+        do {
+          try context.save()
+          print("Сохранение удалось")
+        } catch let error as NSError {
+          print("Не удалось сохранить данные \(error), \(error.userInfo)")
+        }
+      }
+      
       performSegue(withIdentifier: "unwindSegueFromNewEatery", sender: self)
     }
   }

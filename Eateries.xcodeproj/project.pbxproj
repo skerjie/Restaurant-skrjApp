@@ -10,7 +10,6 @@
 		F12C906E1DBB81E500B47A10 /* EateriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C906D1DBB81E500B47A10 /* EateriesTableViewController.swift */; };
 		F12C90701DBB866700B47A10 /* EateriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C906F1DBB866700B47A10 /* EateriesTableViewCell.swift */; };
 		F12C90721DBDBE8500B47A10 /* EateriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C90711DBDBE8500B47A10 /* EateriesDetailViewController.swift */; };
-		F12C90741DBDCDE700B47A10 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C90731DBDCDE700B47A10 /* Restaurant.swift */; };
 		F12C90761DBE0B3400B47A10 /* EateriesDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12C90751DBE0B3400B47A10 /* EateriesDetailTableViewCell.swift */; };
 		F174E3311DB6A28C008AFDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174E3301DB6A28C008AFDAC /* AppDelegate.swift */; };
 		F174E3361DB6A28C008AFDAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174E3341DB6A28C008AFDAC /* Main.storyboard */; };
@@ -27,7 +26,6 @@
 		F12C906D1DBB81E500B47A10 /* EateriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateriesTableViewController.swift; sourceTree = "<group>"; };
 		F12C906F1DBB866700B47A10 /* EateriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateriesTableViewCell.swift; sourceTree = "<group>"; };
 		F12C90711DBDBE8500B47A10 /* EateriesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateriesDetailViewController.swift; sourceTree = "<group>"; };
-		F12C90731DBDCDE700B47A10 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F12C90751DBE0B3400B47A10 /* EateriesDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EateriesDetailTableViewCell.swift; sourceTree = "<group>"; };
 		F174E32D1DB6A28C008AFDAC /* Eateries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eateries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F174E3301DB6A28C008AFDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 				F12C906D1DBB81E500B47A10 /* EateriesTableViewController.swift */,
 				F12C906F1DBB866700B47A10 /* EateriesTableViewCell.swift */,
 				F12C90771DBE0B6100B47A10 /* Detaile */,
-				F12C90731DBDCDE700B47A10 /* Restaurant.swift */,
 				F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */,
 				F1CCAB581DC1FF0C0026A18C /* MapViewController.swift */,
 				F1CCAB5D1DC221580026A18C /* NewEateryTableViewController.swift */,
@@ -136,7 +133,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Andrei Palonski";
 				TargetAttributes = {
 					F174E32C1DB6A28B008AFDAC = {
@@ -190,7 +187,6 @@
 				F12C90761DBE0B3400B47A10 /* EateriesDetailTableViewCell.swift in Sources */,
 				F174E3311DB6A28C008AFDAC /* AppDelegate.swift in Sources */,
 				F174E3391DB6A28C008AFDAC /* Eateries.xcdatamodeld in Sources */,
-				F12C90741DBDCDE700B47A10 /* Restaurant.swift in Sources */,
 				F1CCAB591DC1FF0C0026A18C /* MapViewController.swift in Sources */,
 				F12C906E1DBB81E500B47A10 /* EateriesTableViewController.swift in Sources */,
 				F1CCAB5E1DC221580026A18C /* NewEateryTableViewController.swift in Sources */,
@@ -240,6 +236,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -289,6 +286,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

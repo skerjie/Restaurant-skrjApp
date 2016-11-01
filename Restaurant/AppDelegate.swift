@@ -20,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) // цвет navigationBar
     UINavigationBar.appearance().tintColor = .white // цвет текста отображаемого при переходах типа кнопки < Back
     
+    let statusBarView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 20))
+    statusBarView.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+    self.window?.rootViewController?.view.insertSubview(statusBarView, at: 1)
+    
     if let barFont = UIFont(name: "HelveticaNeue-Light", size: 24) {
       UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: barFont] // название на главном экране navigationBar будет белым, с заданным нами цветом
     }
