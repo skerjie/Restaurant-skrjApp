@@ -16,32 +16,32 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
   var filteredResultArray : [Restaurant] = [] // массив, в который будут попадать рестораны, соответствующие критерию поиска
   var fetchResultController: NSFetchedResultsController<Restaurant>!
   
-//  var restaurants: [Restaurant] = [
-//    Restaurant(name: "Ogonёk Grill&Bar", type: "Ресторан", location: "Уфа", image: "ogonek.jpg", isVisited: false),
-//    Restaurant(name: "Елу", type: "Ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
-//    Restaurant(name: "Bonsai", type: "Ресторан", location: "Уфа", image: "bonsai.jpg", isVisited: false),
-//    Restaurant(name: "Дастархан", type: "Ресторан", location: "Уфа", image: "dastarhan.jpg", isVisited: false),
-//    Restaurant(name: "Индокитай", type: "Ресторан", location: "Уфа", image: "indokitay.jpg", isVisited: false),
-//    Restaurant(name: "X.O", type: "Ресторан-клуб", location: "Уфа", image: "x.o.jpg", isVisited: false),
-//    Restaurant(name: "Балкан Гриль", type: "Ресторан", location: "Уфа", image: "balkan.jpg", isVisited: false),
-//    Restaurant(name: "Respublica", type: "Ресторан", location: "Уфа", image: "respublika.jpg", isVisited: false),
-//    Restaurant(name: "Speak Easy", type: "Ресторанный комплекс", location: "Уфа", image: "speakeasy.jpg", isVisited: false),
-//    Restaurant(name: "Morris Pub", type: "Ресторан", location: "Уфа", image: "morris.jpg", isVisited: false),
-//    Restaurant(name: "Вкусные истории", type: "Ресторан", location: "Уфа", image: "istorii.jpg", isVisited: false),
-//    Restaurant(name: "Классик", type: "Ресторан", location: "Уфа", image: "klassik.jpg", isVisited: false),
-//    Restaurant(name: "Love&Life", type: "Ресторан", location: "Уфа", image: "love.jpg", isVisited: false),
-//    Restaurant(name: "Шок", type: "Ресторан", location: "Уфа", image: "shok.jpg", isVisited: false),
-//    Restaurant(name: "Бочка", type: "Ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
+  //  var restaurants: [Restaurant] = [
+  //    Restaurant(name: "Ogonёk Grill&Bar", type: "Ресторан", location: "Уфа", image: "ogonek.jpg", isVisited: false),
+  //    Restaurant(name: "Елу", type: "Ресторан", location: "Уфа", image: "elu.jpg", isVisited: false),
+  //    Restaurant(name: "Bonsai", type: "Ресторан", location: "Уфа", image: "bonsai.jpg", isVisited: false),
+  //    Restaurant(name: "Дастархан", type: "Ресторан", location: "Уфа", image: "dastarhan.jpg", isVisited: false),
+  //    Restaurant(name: "Индокитай", type: "Ресторан", location: "Уфа", image: "indokitay.jpg", isVisited: false),
+  //    Restaurant(name: "X.O", type: "Ресторан-клуб", location: "Уфа", image: "x.o.jpg", isVisited: false),
+  //    Restaurant(name: "Балкан Гриль", type: "Ресторан", location: "Уфа", image: "balkan.jpg", isVisited: false),
+  //    Restaurant(name: "Respublica", type: "Ресторан", location: "Уфа", image: "respublika.jpg", isVisited: false),
+  //    Restaurant(name: "Speak Easy", type: "Ресторанный комплекс", location: "Уфа", image: "speakeasy.jpg", isVisited: false),
+  //    Restaurant(name: "Morris Pub", type: "Ресторан", location: "Уфа", image: "morris.jpg", isVisited: false),
+  //    Restaurant(name: "Вкусные истории", type: "Ресторан", location: "Уфа", image: "istorii.jpg", isVisited: false),
+  //    Restaurant(name: "Классик", type: "Ресторан", location: "Уфа", image: "klassik.jpg", isVisited: false),
+  //    Restaurant(name: "Love&Life", type: "Ресторан", location: "Уфа", image: "love.jpg", isVisited: false),
+  //    Restaurant(name: "Шок", type: "Ресторан", location: "Уфа", image: "shok.jpg", isVisited: false),
+  //    Restaurant(name: "Бочка", type: "Ресторан", location:  "Уфа", image: "bochka.jpg", isVisited: false)]
   
   @IBAction func close(segue: UIStoryboardSegue) {
     
   }
   
-//  var restaurantNames = ["Ogonёk Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "X.O", "Балкан Гриль", "Respublica", "Speak Easy", "Morris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
-//  
-//  var restaurantImages = ["ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
-//  
-//  var restaurantIsVisited = [Bool](repeatElement(false, count: 15))
+  //  var restaurantNames = ["Ogonёk Grill&Bar", "Елу", "Bonsai", "Дастархан", "Индокитай", "X.O", "Балкан Гриль", "Respublica", "Speak Easy", "Morris Pub", "Вкусные истории", "Классик", "Love&Life", "Шок", "Бочка"]
+  //
+  //  var restaurantImages = ["ogonek.jpg", "elu.jpg", "bonsai.jpg", "dastarhan.jpg", "indokitay.jpg", "x.o.jpg", "balkan.jpg", "respublika.jpg", "speakeasy.jpg", "morris.jpg", "istorii.jpg", "klassik.jpg", "love.jpg", "shok.jpg", "bochka.jpg"]
+  //
+  //  var restaurantIsVisited = [Bool](repeatElement(false, count: 15))
   
   
   override func viewWillAppear(_ animated: Bool) {
@@ -79,7 +79,7 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
     // создаем и получаем доступ к контексту
     if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
       // создаем и инициализируем fetchResultController и передаем созданные выше fetchRequest и context
-    fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+      fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
       fetchResultController.delegate = self // после подписания под протокол обязательно
       
       // пытаемся получить данные и если все успешно, то помещаем их в массив restaurants, если нет, то выводим ошибку
@@ -182,41 +182,45 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
     return cell
   }
   
-//  
-//  // метод который вызывается, когда тапаешь на ячейку
-//  
-//  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//    
-//    let ac = UIAlertController(title: nil, message: "Выберите действие", preferredStyle: .actionSheet)
-//    //let call = UIAlertAction(title: "Позвонить + 375 (29) 7788 99\(index)", style: .default, handler: )
-//    // Создание контроллера внутри клоужера Невозможно совершить звонок
-//    let call = UIAlertAction(title: "Позвонить + 375 (29) 7788 99\(indexPath.row)", style: .default) {
-//      
-//      (action: UIAlertAction) -> Void in
-//      let anotherAC = UIAlertController(title: "Ошибка", message: "Вызов невозможен", preferredStyle: .alert)
-//      let cnclButton = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-//      anotherAC.addAction(cnclButton)
-//      self.present(anotherAC, animated: true, completion: nil)
-//    }
-//    
-//    let isVisitedTitle = self.restaurantIsVisited[indexPath.row] ? "Я не был здесть" : "Я был здесь"
-//    let isVisited = UIAlertAction(title: isVisitedTitle, style: .default) { (action) in
-//      let cell = tableView.cellForRow(at: indexPath)
-//      self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
-//      cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
-//    }
-//    
-//    let cancel = UIAlertAction(title: "Cancel?", style: .cancel, handler: nil)
-//    ac.addAction(call)
-//    ac.addAction(isVisited)
-//    ac.addAction(cancel)
-//    
-//    present(ac, animated: true, completion: nil)
-//    
-//    // убирает постоянно висящее выделение ячейки
-//    tableView.deselectRow(at: indexPath, animated: true)
-//    
-//  }
+  override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+  
+  //
+  //  // метод который вызывается, когда тапаешь на ячейку
+  //
+  //  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+  //
+  //    let ac = UIAlertController(title: nil, message: "Выберите действие", preferredStyle: .actionSheet)
+  //    //let call = UIAlertAction(title: "Позвонить + 375 (29) 7788 99\(index)", style: .default, handler: )
+  //    // Создание контроллера внутри клоужера Невозможно совершить звонок
+  //    let call = UIAlertAction(title: "Позвонить + 375 (29) 7788 99\(indexPath.row)", style: .default) {
+  //
+  //      (action: UIAlertAction) -> Void in
+  //      let anotherAC = UIAlertController(title: "Ошибка", message: "Вызов невозможен", preferredStyle: .alert)
+  //      let cnclButton = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+  //      anotherAC.addAction(cnclButton)
+  //      self.present(anotherAC, animated: true, completion: nil)
+  //    }
+  //
+  //    let isVisitedTitle = self.restaurantIsVisited[indexPath.row] ? "Я не был здесть" : "Я был здесь"
+  //    let isVisited = UIAlertAction(title: isVisitedTitle, style: .default) { (action) in
+  //      let cell = tableView.cellForRow(at: indexPath)
+  //      self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+  //      cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
+  //    }
+  //
+  //    let cancel = UIAlertAction(title: "Cancel?", style: .cancel, handler: nil)
+  //    ac.addAction(call)
+  //    ac.addAction(isVisited)
+  //    ac.addAction(cancel)
+  //
+  //    present(ac, animated: true, completion: nil)
+  //
+  //    // убирает постоянно висящее выделение ячейки
+  //    tableView.deselectRow(at: indexPath, animated: true)
+  //
+  //  }
   
   //  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
   //
@@ -233,7 +237,7 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
     let share = UITableViewRowAction(style: .default, title: "Поделиться?") { (action, indexPath) in
       let defaultText = "Я сейчас в " + self.restaurants[indexPath.row].name!
       if let image = UIImage(data: self.restaurants[indexPath.row].image as! Data) { //UIImage(named: self.restaurants[indexPath.row].image) {
-      
+        
         let activityController = UIActivityViewController(activityItems: [defaultText, image], applicationActivities: nil)
         self.present(activityController, animated: true, completion: nil)
       }
@@ -272,7 +276,6 @@ class EateriesTableViewController: UITableViewController, NSFetchedResultsContro
       }
     }
   }
-  
 }
 
 extension EateriesTableViewController: UISearchResultsUpdating {

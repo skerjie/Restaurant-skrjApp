@@ -13,32 +13,31 @@ class MapViewController: UIViewController, MKMapViewDelegate {
   
   var restaurant: Restaurant!
   let geocoder = CLGeocoder()
-
+  
   @IBOutlet weak var mapView: MKMapView!
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    mapView.delegate = self
+    
+    geocoder.geocodeAddressString(restaurant.location!) { (placemarks, error) in
+      guard error == nil else {return}
+      guard let placemarks = placemarks else {return}
       
-      mapView.delegate = self
-
-      geocoder.geocodeAddressString(restaurant.location!) { (placemarks, error) in
-        guard error == nil else {return}
-        guard let placemarks = placemarks else {return}
-        
-        let placemark = placemarks.first!
-        
-        let annotation = MKPointAnnotation()
-        annotation.title = self.restaurant.name
-        annotation.subtitle = self.restaurant.type
-        
-        guard let location = placemark.location else {return}
-        annotation.coordinate = location.coordinate
-        
-        self.mapView.showAnnotations([annotation], animated: true) // показываем аннотацию
-        self.mapView.selectAnnotation(annotation, animated: true) // разворачиваем чтобы посмотреть детально
-      }
+      let placemark = placemarks.first!
       
+      let annotation = MKPointAnnotation()
+      annotation.title = self.restaurant.name
+      annotation.subtitle = self.restaurant.type
+      
+      guard let location = placemark.location else {return}
+      annotation.coordinate = location.coordinate
+      
+      self.mapView.showAnnotations([annotation], animated: true) // показываем аннотацию
+      self.mapView.selectAnnotation(annotation, animated: true) // разворачиваем чтобы посмотреть детально
     }
+  }
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     
@@ -48,7 +47,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     // если не удалось создать переиспользуемую ячейку, то создаем вручную
     if annotationView == nil {
-    annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+      annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
       annotationView?.canShowCallout = true // позволяет отображать дополнительную аннотацию созданную ниже, а именно картинку
     }
     
@@ -56,7 +55,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     annotationView?.rightCalloutAccessoryView = rightImage // справа от аннотации
     annotationView?.pinTintColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1) // цвет булавки
     return annotationView
-
+    
   }
-
 }

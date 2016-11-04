@@ -42,7 +42,6 @@ class PageViewController: UIPageViewController {
       setViewControllers([contentVC], direction: .forward, animated: true, completion: nil)
     }
   }
-  
 }
 
 extension PageViewController: UIPageViewControllerDataSource {
@@ -57,14 +56,12 @@ extension PageViewController: UIPageViewControllerDataSource {
     return displayViewController(atIndex: index)
   }
   
-//  func presentationCount(for pageViewController: UIPageViewController) -> Int {
-//    return headersArray.count
-//  }
-//  
-//  func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//    let contentVC = storyboard?.instantiateViewController(withIdentifier: "contentViewController") as? ContentViewController
-//    return contentVC!.index
-//  }
-  
-  
+  //  func presentationCount(for pageViewController: UIPageViewController) -> Int {
+  //    return headersArray.count
+  //  }
+  //
+  //  func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+  //    let contentVC = storyboard?.instantiateViewController(withIdentifier: "contentViewController") as? ContentViewController
+  //    return contentVC!.index
+  //  }
 }

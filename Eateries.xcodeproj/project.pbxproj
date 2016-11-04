@@ -18,6 +18,8 @@
 		F174E33E1DB6A28C008AFDAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174E33C1DB6A28C008AFDAC /* LaunchScreen.storyboard */; };
 		F1C25FFD1DC8C2D30079C34F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C25FFC1DC8C2D30079C34F /* PageViewController.swift */; };
 		F1C25FFF1DC8C2F00079C34F /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C25FFE1DC8C2F00079C34F /* ContentViewController.swift */; };
+		F1C260021DCA759C0079C34F /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C260011DCA759C0079C34F /* AboutTableViewController.swift */; };
+		F1C260041DCA7AC20079C34F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C260031DCA7AC20079C34F /* WebViewController.swift */; };
 		F1CCAB571DBFAFDA0026A18C /* RateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */; };
 		F1CCAB591DC1FF0C0026A18C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCAB581DC1FF0C0026A18C /* MapViewController.swift */; };
 		F1CCAB5C1DC1FFCF0026A18C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CCAB5B1DC1FFCF0026A18C /* MapKit.framework */; };
@@ -38,6 +40,8 @@
 		F174E33F1DB6A28C008AFDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1C25FFC1DC8C2D30079C34F /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F1C25FFE1DC8C2F00079C34F /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		F1C260011DCA759C0079C34F /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		F1C260031DCA7AC20079C34F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateViewController.swift; sourceTree = "<group>"; };
 		F1CCAB581DC1FF0C0026A18C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F1CCAB5B1DC1FFCF0026A18C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -93,6 +97,8 @@
 				F1CCAB561DBFAFDA0026A18C /* RateViewController.swift */,
 				F1CCAB581DC1FF0C0026A18C /* MapViewController.swift */,
 				F1CCAB5D1DC221580026A18C /* NewEateryTableViewController.swift */,
+				F1C260011DCA759C0079C34F /* AboutTableViewController.swift */,
+				F1C260031DCA7AC20079C34F /* WebViewController.swift */,
 				F174E3341DB6A28C008AFDAC /* Main.storyboard */,
 				F174E33A1DB6A28C008AFDAC /* Assets.xcassets */,
 				F174E33C1DB6A28C008AFDAC /* LaunchScreen.storyboard */,
@@ -209,6 +215,8 @@
 				F1C25FFF1DC8C2F00079C34F /* ContentViewController.swift in Sources */,
 				F1CCAB571DBFAFDA0026A18C /* RateViewController.swift in Sources */,
 				F12C90701DBB866700B47A10 /* EateriesTableViewCell.swift in Sources */,
+				F1C260041DCA7AC20079C34F /* WebViewController.swift in Sources */,
+				F1C260021DCA759C0079C34F /* AboutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

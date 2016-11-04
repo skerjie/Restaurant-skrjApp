@@ -96,9 +96,8 @@ class EateriesDetailViewController: UIViewController, UITableViewDelegate, UITab
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "mapSegue" {
-    let dvc = segue.destination as! MapViewController
+      let dvc = segue.destination as! MapViewController
       dvc.restaurant = self.restaurant
     }
   }
-  
 }
